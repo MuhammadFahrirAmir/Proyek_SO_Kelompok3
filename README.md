@@ -1,2 +1,2 @@
 # Proyek_SO_Kelompok3
-Proyek Sistem Operasi - Distro Srever &amp; Buildroot ARM64.
+Proyek Sistem Operasi - Distro Srever web/file &amp; Buildroot ARM64.
