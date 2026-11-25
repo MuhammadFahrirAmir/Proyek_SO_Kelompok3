@@ -1,0 +1,19 @@
+UFW
+Kami memilih ufw karena distro ARKANODE akan menjalankan beberapa layanan sekaligus,
+yaitu web server, Samba, FTP, dan SSH, dan setiap layanan membuka port yang bisa 
+diakses dari luar. Supaya server tidak terbuka tanpa pengaman, kami butuh firewall.
+Kami memilih ufw dibandingkan iptables karena perintahnya lebih mudah dipahami dan
+diingat, misalnya ufw allow 80/tcp, sehingga cocok untuk pengguna pemula yang
+menjadi target distro ini. ufw juga sudah tersedia di Ubuntu, jadi tidak menambah
+ukuran ISO. Selain itu, dengan ufw kami bisa mengatur port apa saja yang dibuka, dan
+datanya nanti kami pakai untuk tabel perbandingan port terbuka di Tahap 3.
+
+Net-Tools
+Kami memasang net-tools supaya bisa memeriksa kondisi jaringan server dengan 
+perintah netstat, ifconfig, dan arp. Setelah nginx, Samba, dan vsftpd terpasang, 
+kami perlu memastikan layanan itu benar-benar berjalan dan mendengarkan di port yang
+benar, dan netstat -tulpn membantu untuk itu. Perintah ini juga sering dipakai di 
+buku dan tutorial yang kami baca, jadi lebih mudah diikuti saat belajar maupun saat
+demo. Kami tahu net-tools sudah mulai digantikan oleh ss dan ip, tetapi kami tetap
+memasangnya agar pengguna yang terbiasa dengan perintah lama tidak kesulitan, 
+sementara ss tetap bisa dipakai sebagai alternatif.
