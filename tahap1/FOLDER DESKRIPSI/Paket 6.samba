@@ -1,1 +1,8 @@
-Samba dipilih karena memiliki fungsi untuk berbagi file dan folder antarperangkat melalui jaringan, baik Linux maupun Windows. Paket ini cukup bermanfaat untuk mendukung kebutuhan sistem berbagi data pada distro Linux yang dikembangkan kelompok. Tingkat kesulitannya tergolong sedang, karena perlu memahami proses instalasi, konfigurasi folder yang dibagikan, serta pengujian koneksi agar layanan Samba dapat berjalan dengan baik.
+Alasan pemilihannya:
+Samba dipilih karena memiliki fungsi untuk berbagi file dan folder antarperangkat melalui jaringan, 
+baik Linux maupun Windows. Paket ini cukup bermanfaat untuk mendukung kebutuhan sistem berbagi data 
+pada distro Linux yang dikembangkan oleh kelompok kami. 
+
+Tingkat kesulitannya:
+Tingkat kesulitannya tergolong sedang, karena perlu memahami proses instalasi, konfigurasi folder yang dibagikan, 
+serta pengujian koneksi agar layanan Samba dapat berjalan dengan baik.
