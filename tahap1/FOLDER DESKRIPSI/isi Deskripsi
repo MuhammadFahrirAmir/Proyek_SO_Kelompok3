@@ -1,1 +1,4 @@
-
+Membangun ISO Linux kustom bertema server web/file lengkap dengan penyesuaian paket, 
+desktop environment ringan, branding, konfigurasi bawaan, serta skrip login pertama. 
+ISO diuji melalui live boot dan instalasi di VM, dengan seluruh konfigurasi dan 
+skrip disimpan di repositori agar dapat dibangun ulang secara konsisten.
