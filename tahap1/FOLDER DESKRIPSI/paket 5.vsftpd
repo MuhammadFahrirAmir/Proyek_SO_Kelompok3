@@ -1,1 +1,6 @@
-Vsftpd digunakan sebagai server FTP yang memungkinkan pengguna mengirim dan menerima file antara client dan server melalui jaringan. Alat ini dipilih karena ringan, mudah dikonfigurasi, dan memiliki fitur keamanan. Tingkat kesulitannya tergolong sedang karena perlu memahami konfigurasi server FTP, pengaturan hak akses pengguna, serta pengujian transfer file.
+vsftpd : 
+Vsftpd digunakan sebagai server FTP yang memungkinkan pengguna 
+mengirim dan menerima file antara client dan server melalui jaringan. 
+Alat ini dipilih karena ringan, mudah dikonfigurasi, dan memiliki fitur keamanan. 
+Tingkat kesulitannya tergolong sedang karena perlu memahami konfigurasi server FTP, 
+pengaturan hak akses pengguna, serta pengujian transfer file.
