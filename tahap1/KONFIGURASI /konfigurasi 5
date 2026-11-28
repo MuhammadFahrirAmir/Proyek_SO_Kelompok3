@@ -1,0 +1,14 @@
+konfigurasi/distro-splash.plymouth
+>Target di chroot: /usr/share/plymouth/themes/distro-splash/distro-splash.plymouth
+
+[Plymouth Theme]
+Name=ARKANODEOS Splash
+Description=Splash screen kustom proyek Sistem Operasi ARKANODEOS
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/distro-splash
+ScriptFile=/usr/share/plymouth/themes/distro-splash/distro-splash.script
+
+Mendefinisikan tema boot splash Plymouth untuk ARKANODEOS dan
+mengarahkannya ke file skrip visual distro-splash.script.
