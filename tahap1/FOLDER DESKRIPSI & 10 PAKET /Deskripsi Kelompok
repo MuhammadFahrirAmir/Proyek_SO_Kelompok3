@@ -8,4 +8,22 @@ system di VM, kemudian diinstal sampai selesai dan di-boot dari disk. Seluruh ko
 agar ISO dapat dibangun ulang secara konsisten dari awal.
 
 10 Paket beserta Alasan Kegunaan:
-1. 
+1. paket curl
+Alasan pemilihan paket:
+Pengujian & verifikasi layanan web/file: Memudahkan pengujian HTTP/HTTPS serta akses file transfer (seperti FTP) 
+langsung dari terminal saat server web atau file server aktif, termasuk mengecek status code (HTTP 200), header respons, 
+atau mengunduh berkas uji.
+Diagnostik koneksi & API/endpoint: Membantu memeriksa keterjangkauan endpoint jaringan, menguji respons layanan, dan 
+memastikan konfigurasi port atau reverse proxy berjalan sesuai harapan tanpa bergantung pada browser GUI.
+Otomatisasi skrip: Sangat praktis dipakai di dalam shell script (termasuk skrip pengecekan atau skrip login pertama) untuk 
+melakukan pengecekan status layanan secara cepat dan ringan.
+2. paket htop
+Alasan pemilihan paket
+Pemantauan sumber daya sistem secara real-time: Menampilkan penggunaan CPU, memori (RAM), dan swap secara interaktif dan 
+visual di terminal, sehingga mudah memantau beban sistem saat server melayani permintaan web atau transfer berkas.
+Identifikasi proses yang boros sumber daya: Memudahkan melihat proses mana (misalnya proses web server, file server, atau 
+proses latar belakang) yang sedang memakai CPU atau RAM tinggi saat terjadi kelambatan.
+Lebih informatif dan ringan untuk administrasi: Dibandingkan top bawaan, tampilannya lebih mudah dibaca dan memungkinkan 
+pengelolaan proses secara cepat langsung dari terminal tanpa membebani sistem dengan monitoring berat.
+
+
