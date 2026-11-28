@@ -10,6 +10,3 @@ logo.sprite.SetY(Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
 logo.sprite.SetOpacity(1);
 
 Skrip grafis Plymouth untuk menggambar latar gradasi gelap dan menempatkan logo di tengah layar saat proses booting.
-
-==========================================================================
-
