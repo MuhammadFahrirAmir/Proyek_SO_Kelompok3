@@ -1,0 +1,11 @@
+konfigurasi/first-login.desktop
+>target di chroot: /etc/skel/.config/autostart/first-login.desktop
+
+[Desktop Entry]
+Type=Application
+Name=ARKANODEOS First Login Setup
+Exec=/usr/local/bin/first-login.sh
+X-GNOME-Autostart-enabled=true
+
+Mendaftarkan skrip first-login.sh agar otomatis dijalankan 
+saat user pertama kali masuk ke desktop.
