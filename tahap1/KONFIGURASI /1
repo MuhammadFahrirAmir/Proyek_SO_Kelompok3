@@ -1,0 +1,8 @@
+-konfigurasi/50-xfce-defau
+     +Target di chroot: /etc/lightdm/lightdm.conf.d/50-xfce-default.conflt.conf
+ [Seat:*]   
+ user-session=xfce
+ greeter-session=lightdm-gtk-greeter
+
+ menetapkan sesi desktop bawaan ke XFCE dan greeter login ke LightDM GTK Greeter
+ agar sistem tidak kembali ke GNOME/GDM3.
