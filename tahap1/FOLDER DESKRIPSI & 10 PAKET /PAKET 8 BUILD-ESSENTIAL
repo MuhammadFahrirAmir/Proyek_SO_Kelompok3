@@ -1,7 +1,0 @@
-Alasan Menggunakan Build-Essential:
-Build-essential digunakan pada sistem operasi Linux karena merupakan paket yang menyediakan berbagai alat penting untuk mendukung proses 
-pemrograman dan pengembangan perangkat lunak. Di dalamnya terdapat compiler seperti GCC untuk bahasa C dan G++ untuk bahasa C++, serta Make 
-untuk membantu proses kompilasi program. Dengan menginstal build-essential, pengguna dapat membuat, mengompilasi, menguji, dan membangun program
-dari source code dengan lebih mudah. Selain itu, paket ini juga dibutuhkan oleh beberapa aplikasi yang proses instalasinya memerlukan compiler 
-dan alat pengembangan. Oleh karena itu, build-essential penting diinstal, khususnya bagi mahasiswa dan programmer yang menggunakan Linux
-untuk belajar pemrograman maupun mengembangkan aplikasi.
