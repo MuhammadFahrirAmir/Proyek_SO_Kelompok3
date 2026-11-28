@@ -35,4 +35,3 @@ chmod 644 /etc/lightdm/lightdm-gtk-greeter.conf
 Menyiapkan folder wallpaper di /usr/share/backgrounds/distro-custom,
 membersihkan symlink rusak jika ada, mengatur izin baca (644/755),
 membuat symlink fallback XFCE, dan menyalin konfigurasi desktop/LightDM. 
-(Pastikan Wallpaper-distro.jpeg sudah berada di folder tersebut sebelum menjalankan skrip).
