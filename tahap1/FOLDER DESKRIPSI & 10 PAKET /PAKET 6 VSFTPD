@@ -1,0 +1,8 @@
+vsftpd : 
+Alasan pemilihan paket:
+Vsftpd dipilih karena ringan, mudah dikonfigurasi, dan memiliki fitur keamanan. 
+Paket ini digunakan untuk membuat server FTP yang memungkinkan pengguna mengirim 
+dan menerima file antara client dan server melalui jaringan. Selain itu, vsftpd
+memudahkan pengaturan hak akses pengguna serta pengujian koneksi dan transfer file. 
+Tingkat kesulitannya tergolong sedang karena membutuhkan pemahaman mengenai konfigurasi
+server FTP, pengaturan hak akses pengguna, dan pengujian transfer file.
