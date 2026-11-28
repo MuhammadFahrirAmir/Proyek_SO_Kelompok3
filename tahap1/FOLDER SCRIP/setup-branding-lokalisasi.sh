@@ -45,3 +45,8 @@ chmod +x /usr/local/bin/first-login.sh
 
 cp /root/tahap1/konfigurasi/first-login.desktop \
   /etc/skel/.config/autostart/first-login.desktop
+
+
+Mengatur identitas nama distro ARKANODEOS pada /etc/os-release dan /etc/lsb-release 
+(tanpa mengubah ID_LIKE=debian atau VERSION_CODENAME=jammy), mengatur zona waktu Asia/Makassar dan locale, 
+serta membuat skrip first-login.sh.
