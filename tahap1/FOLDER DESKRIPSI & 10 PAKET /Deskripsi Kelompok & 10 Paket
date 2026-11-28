@@ -80,13 +80,9 @@ paket ini juga dibutuhkan oleh beberapa aplikasi yang proses instalasinya memerl
 Oleh karena itu, build-essential penting diinstal, khususnya bagi mahasiswa dan programmer yang menggunakan Linux
 untuk belajar pemrograman maupun mengembangkan aplikasi.
 >> 9. Nginx
-Saya memilih Nginx karena merupakan salah satu web server yang memiliki performa tinggi, stabil, dan mampu menangani banyak
-permintaan pengguna secara bersamaan. Nginx dikenal memiliki penggunaan sumber daya yang relatif efisien sehingga tidak 
-membutuhkan terlalu banyak RAM maupun CPU untuk menjalankan layanan web. Hal ini membuat Nginx cocok digunakan pada server 
-dengan spesifikasi perangkat keras yang terbatas maupun server berskala besar.
-Selain itu, Nginx memiliki kemampuan dalam menangani lalu lintas jaringan yang tinggi atau high traffic dengan baik. 
-Nginx menggunakan sistem arsitektur asynchronous dan event-driven yang memungkinkan server memproses banyak koneksi secara
-bersamaan tanpa harus membuat proses baru untuk setiap permintaan pengguna. Dengan demikian, penggunaan sumber daya server
-menjadi lebih hemat dan kinerja tetap stabil meskipun terdapat banyak pengguna yang mengakses website dalam waktu bersamaan.
+Saya memilih Nginx karena merupakan web server yang memiliki performa tinggi, penggunaan sumber daya yang efisien,
+serta mampu menangani banyak permintaan pengguna secara bersamaan. Selain itu, Nginx mudah dikonfigurasi, memiliki fitur 
+keamanan yang baik, dan dapat digunakan sebagai reverse proxy. Oleh karena itu, Nginx menjadi pilihan yang tepat untuk 
+membangun dan mengelola server website secara cepat, stabil, dan efisien.
 >> 10. fail2ban
 
