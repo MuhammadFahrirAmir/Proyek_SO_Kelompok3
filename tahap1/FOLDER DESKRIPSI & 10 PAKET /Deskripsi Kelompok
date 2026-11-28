@@ -1,0 +1,11 @@
+  Proyek ini membangun ISO Linux kustom bernama ARKANODE Linux Server yang bertema server web/file dan berbasis Ubuntu 24.04 LTS. 
+ISO dibuat dengan Cubic melalui beberapa penyesuaian: penghapusan paket yang tidak dibutuhkan server, pemasangan paket yang 
+relevan untuk layanan web dan berbagi berkas (seperti nginx, Samba, vsftpd, SSH, dan ufw), serta pengaturan desktop environment
+ringan XFCE. Distro ini juga diberi identitas sendiri melalui nama, logo, dan wallpaper (branding).
+  Selain itu, ISO dilengkapi konfigurasi bawaan berupa bahasa, zona waktu, pengguna awal, dan skrip yang berjalan otomatis saat
+login pertama untuk mengecek layanan dan mengaktifkan pengaturan dasar. ISO yang dihasilkan diuji dengan boot sebagai live
+system di VM, kemudian diinstal sampai selesai dan di-boot dari disk. Seluruh konfigurasi dan skrip disimpan di repositori Git
+agar ISO dapat dibangun ulang secara konsisten dari awal.
+
+10 Paket beserta Alasan Kegunaan:
+1. 
