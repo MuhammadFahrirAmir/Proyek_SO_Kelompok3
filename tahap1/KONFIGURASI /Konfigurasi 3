@@ -1,1 +1,9 @@
+konfigurasi/lightdm-gtk-greeter.conf
+>Target di chroot: /etc/lightdm/lightdm-gtk-greeter.conf
 
+[greeter]
+background=/usr/share/backgrounds/distro-custom/Wallpaper-distro.jpeg
+theme-name=Greybird
+icon-theme-name=elementary-xfce-dark
+
+Mengatur gambar latar layar login LightDM menggunakan wallpaper kustom ARKANODEOS serta tema tampilan yang ringan.
