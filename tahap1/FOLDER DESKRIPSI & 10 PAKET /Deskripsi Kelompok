@@ -7,8 +7,9 @@ login pertama untuk mengecek layanan dan mengaktifkan pengaturan dasar. ISO yang
 system di VM, kemudian diinstal sampai selesai dan di-boot dari disk. Seluruh konfigurasi dan skrip disimpan di repositori Git
 agar ISO dapat dibangun ulang secara konsisten dari awal.
 
-10 Paket beserta Alasan Kegunaan:
-1. paket curl
+========================10 Paket beserta Alasan Kegunaan:========================
+
+>> 1. paket curl
 Alasan pemilihan paket:
 Pengujian & verifikasi layanan web/file: Memudahkan pengujian HTTP/HTTPS serta akses file transfer (seperti FTP) 
 langsung dari terminal saat server web atau file server aktif, termasuk mengecek status code (HTTP 200), header respons, 
@@ -17,7 +18,7 @@ Diagnostik koneksi & API/endpoint: Membantu memeriksa keterjangkauan endpoint ja
 memastikan konfigurasi port atau reverse proxy berjalan sesuai harapan tanpa bergantung pada browser GUI.
 Otomatisasi skrip: Sangat praktis dipakai di dalam shell script (termasuk skrip pengecekan atau skrip login pertama) untuk 
 melakukan pengecekan status layanan secara cepat dan ringan.
-2. paket htop
+>> 2. paket htop
 Alasan pemilihan paket
 Pemantauan sumber daya sistem secara real-time: Menampilkan penggunaan CPU, memori (RAM), dan swap secara interaktif dan 
 visual di terminal, sehingga mudah memantau beban sistem saat server melayani permintaan web atau transfer berkas.
@@ -25,5 +26,57 @@ Identifikasi proses yang boros sumber daya: Memudahkan melihat proses mana (misa
 proses latar belakang) yang sedang memakai CPU atau RAM tinggi saat terjadi kelambatan.
 Lebih informatif dan ringan untuk administrasi: Dibandingkan top bawaan, tampilannya lebih mudah dibaca dan memungkinkan 
 pengelolaan proses secara cepat langsung dari terminal tanpa membebani sistem dengan monitoring berat.
-
-
+>> 3. UFW
+Kami memilih ufw karena distro ARKANODE akan menjalankan beberapa layanan sekaligus,
+yaitu web server, Samba, FTP, dan SSH, dan setiap layanan membuka port yang bisa 
+diakses dari luar. Supaya server tidak terbuka tanpa pengaman, kami butuh firewall.
+Kami memilih ufw dibandingkan iptables karena perintahnya lebih mudah dipahami dan
+diingat, misalnya ufw allow 80/tcp, sehingga cocok untuk pengguna pemula yang
+menjadi target distro ini. ufw juga sudah tersedia di Ubuntu, jadi tidak menambah
+ukuran ISO. Selain itu, dengan ufw kami bisa mengatur port apa saja yang dibuka, dan
+datanya nanti kami pakai untuk tabel perbandingan port terbuka di Tahap 3.
+>> 4. Net-Tools
+Kami memasang net-tools supaya bisa memeriksa kondisi jaringan server dengan 
+perintah netstat, ifconfig, dan arp. Setelah nginx, Samba, dan vsftpd terpasang, 
+kami perlu memastikan layanan itu benar-benar berjalan dan mendengarkan di port yang
+benar, dan netstat -tulpn membantu untuk itu. Perintah ini juga sering dipakai di 
+buku dan tutorial yang kami baca, jadi lebih mudah diikuti saat belajar maupun saat
+demo. Kami tahu net-tools sudah mulai digantikan oleh ss dan ip, tetapi kami tetap
+memasangnya agar pengguna yang terbiasa dengan perintah lama tidak kesulitan, 
+sementara ss tetap bisa dipakai sebagai alternatif.
+>> 5. OpenSSH Server 
+Kami memilih OpenSSH server karena ARKANODE Linux Server dirancang
+untuk menyediakan layanan web server dan file server yang dapat dikelolah dari jarak jauh. 
+Dengan OpenSSH Server, administrator dapat mengelola dan mengakses server melalui koneksi
+SSH tanpa harus berada lansung di depan komputer server.
+Kami memilih OpenSSH dibandingkan akses jarak jauh yang tidak terenkripsi karena SSH 
+menggunakan menggnakan enkripsi untuk melindungi komunikasi antar client dan server. Hal ini
+penting untuk menjaga keamanan proses login maupun pengelolaan server, terutama ketika administrator
+mengakses server melalui jaringan. Selain itu, OpenSSH Server memudahkan administrator dalam menjalankan perinta linux, 
+memeriksa kondisi layanan seperti Nginx, Samba, dan FTP, serta melakukan pemeliharaan server dari komputer 
+lain.Paket ini sesuai dengan tujuan ARKANODE Linux Server karena membantu administrator mengelola
+layanan web server dan file server secara lebih praktis, aman, dan efisien.
+>> 6. Vsftpd 
+Vsftpd dipilih karena ringan, mudah dikonfigurasi, dan memiliki fitur keamanan. 
+Paket ini digunakan untuk membuat server FTP yang memungkinkan pengguna mengirim 
+dan menerima file antara client dan server melalui jaringan. Selain itu, vsftpd
+memudahkan pengaturan hak akses pengguna serta pengujian koneksi dan transfer file. 
+Tingkat kesulitannya tergolong sedang karena membutuhkan pemahaman mengenai konfigurasi
+server FTP, pengaturan hak akses pengguna, dan pengujian transfer file.
+>> 7. Samba
+Alasan pemilihannya:
+Samba dipilih karena memiliki fungsi untuk berbagi file dan folder antarperangkat melalui jaringan, 
+baik Linux maupun Windows. Paket ini cukup bermanfaat untuk mendukung kebutuhan sistem berbagi data 
+pada distro Linux yang dikembangkan oleh kelompok kami. 
+Tingkat kesulitannya:
+Tingkat kesulitannya tergolong sedang, karena perlu memahami proses instalasi, konfigurasi folder yang dibagikan, 
+serta pengujian koneksi agar layanan Samba dapat berjalan dengan baik.
+>> 8. Build-essential 
+Build-essential digunakan pada sistem operasi Linux karena merupakan paket yang menyediakan berbagai alat penting untuk mendukung proses 
+pemrograman dan pengembangan perangkat lunak. Di dalamnya terdapat compiler seperti GCC untuk bahasa C dan G++ untuk bahasa C++, serta Make 
+untuk membantu proses kompilasi program. Dengan menginstal build-essential, pengguna dapat membuat, mengompilasi, menguji, dan membangun program
+dari source code dengan lebih mudah. Selain itu, paket ini juga dibutuhkan oleh beberapa aplikasi yang proses instalasinya memerlukan compiler 
+dan alat pengembangan. Oleh karena itu, build-essential penting diinstal, khususnya bagi mahasiswa dan programmer yang menggunakan Linux
+untuk belajar pemrograman maupun mengembangkan aplikasi.
+>> 9. 
+>> 10. 
