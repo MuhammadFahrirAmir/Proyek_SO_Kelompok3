@@ -25,7 +25,7 @@ apt install -y ubiquity ubiquity-frontend-gtk casper
 
 Mengaktifkan repositori universe/multiverse, memasang XFCE dan LightDM, menjadikannya
 display manager default, menghapus paket GNOME/bawaan berat, serta memastikan ubiquity dan casper tetap ada.
-============================================================================================================
+
 
 
 skrip/setup-wallpaper.sh
