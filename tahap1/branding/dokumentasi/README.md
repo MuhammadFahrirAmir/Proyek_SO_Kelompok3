@@ -4,7 +4,7 @@
 - Nama: ARKANODE Linux Server
 - Kategori: Lightweight Linux Server
 - Fokus: Web Server dan File Server
-- Distro Induk: Ubuntu 24.04 LTS
+- Distro Induk: Ubuntu 22.04 LTS
 
 ## 2. Identitas Visual
 - Warna utama: Navi Blue
