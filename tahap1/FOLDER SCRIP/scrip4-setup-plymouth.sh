@@ -35,4 +35,5 @@ update-alternatives --set default.plymouth \
 
 update-initramfs -u -k all
 
-Memasang Plymouth & kernel generic, menyalin logo ke tema distro-splash sekaligus ke file bawaan Ubuntu/spinner/bgrt (agar logo tetap muncul saat booting), mengaktifkan tema, dan membangun ulang initramfs. (Pastikan /root/logo.png sudah tersedia di chroot).
+Memasang Plymouth & kernel generic, menyalin logo ke tema distro-splash sekaligus ke file bawaan Ubuntu/spinner/bgrt (agar logo tetap muncul saat booting), mengaktifkan tema,
+dan membangun ulang initramfs. (Pastikan /root/logo.png sudah tersedia di chroot).
