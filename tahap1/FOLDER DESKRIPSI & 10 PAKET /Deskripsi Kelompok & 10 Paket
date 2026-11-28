@@ -84,5 +84,13 @@ Saya memilih Nginx karena merupakan web server yang memiliki performa tinggi, pe
 serta mampu menangani banyak permintaan pengguna secara bersamaan. Selain itu, Nginx mudah dikonfigurasi, memiliki fitur 
 keamanan yang baik, dan dapat digunakan sebagai reverse proxy. Oleh karena itu, Nginx menjadi pilihan yang tepat untuk 
 membangun dan mengelola server website secara cepat, stabil, dan efisien.
->> 10. fail2ban
+>> 10. fail2band
+Fail2ban digunakan pada sistem operasi Linux karena merupakan paket keamanan yang berfungsi melindungi server dari serangan brute force,
+yaitu percobaan login berulang dengan menebak password. Fail2ban bekerja dengan memantau file log layanan seperti SSH, FTP,
+dan web server, lalu otomatis memblokir alamat IP yang berkali-kali gagal login melalui firewall. Dengan menginstal fail2ban,
+pengguna tidak perlu lagi memeriksa log secara manual karena proses pendeteksian dan pemblokiran berjalan otomatis. Selain itu,
+fail2ban dapat dikonfigurasi sesuai kebutuhan, misalnya mengatur batas percobaan login (maxretry), jangka waktu pengecekan (findtime),
+dan lama pemblokiran (bantime). Paket ini juga melengkapi layanan lain yang diinstal pada server, seperti openssh-server, vsftpd,
+dan nginx, sehingga keamanannya lebih terjamin. Oleh karena itu, fail2ban penting diinstal, khususnya bagi pengguna yang mengelola
+server Linux dan ingin menjaga sistemnya dari akses yang tidak sah.
 
