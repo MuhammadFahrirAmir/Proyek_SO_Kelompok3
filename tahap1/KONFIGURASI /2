@@ -1,0 +1,10 @@
+-konfigurasi/50-live-autologin.conf
+    +Target di chroot: /etc/lightdm/lightdm.conf.d/50-live-autologin.conf
+
+[Seat:*]
+autologin-guest=false
+autologin-user=ubuntu
+autologin-user-timeout=0
+autologin-session=xfce
+
+Keterangan: Mengaktifkan login otomatis ke sesi XFCE saat mode Live USB / Try Ubuntu dengan user ARKANODEOS
